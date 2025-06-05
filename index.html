@@ -1,60 +1,67 @@
 <!DOCTYPE html>
-<html>
-<head>
-   <!DOCTYPE html>
 <html lang="pt-BR">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collection Express - Coleta Rápida e Sustentável</title>
+    <title>Collect express - Coleta Rápida e Sustentável</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="script.js">
     <link rel="shortcut icon" href="imagens/logo.icon" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-    </div>
         <div class="container">
             <nav>
-                <div class="logo">Collection <span>Express</span></div>
+                <div class="logo">Eco<span>Collect</span></div>
                 <div class="nav-links">
                     <a href="#how-it-works">Como Funciona</a>
                     <a href="#services">Serviços</a>
                     <a href="#suggestions">Sugestões</a>
-                    <a href="#" class="btn">Baixe o App</a>
+                    <a href="login.html" class="btn-login">Entrar</a>
+                    <a href="#" class="btn-primary">Baixe o App</a>               
+                </div>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
                 </div>
             </nav>
         </div>
     </header>
     
     <section class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <h1>Coleta de Resíduos Rápida e Sustentável</h1>
-            <p>Solicite a coleta de lixo reciclável, orgânico ou eletrônico com facilidade e ajude o planeta!</p>
-            <a href="#" class="btn">Agendar Coleta</a>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Coleta de Resíduos Rápida e Sustentável</h1>
+                <p>Solicite a coleta de lixo reciclável, orgânico ou eletrônico com facilidade e ajude o planeta!</p>
+                <div class="hero-buttons">
+                    <a href="" class="btn-primary">Agendar Coleta</a>
+                    <a href="" class="btn-secondary">Saiba Mais</a>
+                </div>
+            </div>
         </div>
-        <img src="https://gazetabragantina.com.br/wp-content/uploads/2021/12/02.12.2021-Bragan%C3%A7a-Paulista-ter%C3%A1-12-caminh%C3%B5es-0km-para-coleta-de-lixo-6.jpg" alt="Coleta sustentável" class="hero-image">
-    </div>
-</section>
+    </section>
+
     <section id="how-it-works" class="how-it-works">
         <div class="container">
             <h2 class="section-title">Como Funciona</h2>
             <div class="steps">
                 <div class="step">
+                    <div class="step-number">1</div>
                     <img src="https://cdn-icons-png.flaticon.com/512/3652/3652191.png" alt="Agendar">
-                    <h3>1. Agende no App</h3>
+                    <h3>Agende no App</h3>
                     <p>Escolha o tipo de resíduo e agende a coleta em poucos cliques.</p>
                 </div>
                 <div class="step">
+                    <div class="step-number">2</div>
                     <img src="https://cdn-icons-png.flaticon.com/512/2940/2940775.png" alt="Coletor">
-                    <h3>2. Coletor a Caminho</h3>
+                    <h3>Coletor a Caminho</h3>
                     <p>Nossos coletores parceiros aceitam sua solicitação em minutos.</p>
                 </div>
                 <div class="step">
+                    <div class="step-number">3</div>
                     <img src="https://cdn-icons-png.flaticon.com/512/3095/3095583.png" alt="Reciclagem">
-                    <h3>3. Descarte Correto</h3>
+                    <h3>Descarte Correto</h3>
                     <p>Seus resíduos são encaminhados para reciclagem ou compostagem.</p>
                 </div>
             </div>
@@ -66,19 +73,28 @@
             <h2 class="section-title">Nossos Serviços</h2>
             <div class="service-cards">
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3394/3394222.png" alt="Recicláveis">
+                    <div class="card-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3394/3394222.png" alt="Recicláveis">
+                    </div>
                     <h3>Coleta Reciclável</h3>
                     <p>Papel, plástico, vidro e metal são enviados para centros de reciclagem.</p>
+                    <a href="#" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3081/3081985.png" alt="Orgânicos">
+                    <div class="card-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3081/3081985.png" alt="Orgânicos">
+                    </div>
                     <h3>Coleta Orgânica</h3>
                     <p>Restos de alimentos viram adubo em composteiras sustentáveis.</p>
+                    <a href="#" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2883/2883813.png" alt="Eletrônicos">
+                    <div class="card-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2883/2883813.png" alt="Eletrônicos">
+                    </div>
                     <h3>Coleta Eletrônica</h3>
                     <p>Descarte seguro de pilhas, baterias e eletrônicos.</p>
+                    <a href="#" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -109,29 +125,48 @@
     
     <footer>
         <div class="container">
-            <div class="footer-links">
-                <a href="#">Termos de Uso</a>
-                <a href="#">Política de Privacidade</a>
-                <a href="#">Contato</a>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>EcoCollect</h3>
+                    <p>Um serviço eco-friendly para um futuro mais limpo.</p>
+                    <div class="app-download">
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1200px-Download_on_the_App_Store_Badge.svg.png" alt="App Store"></a>
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1200px-Google_Play_Store_badge_EN.svg.png" alt="Google Play"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="#how-it-works">Como Funciona</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#suggestions">Sugestões</a></li>
+                        <li><a href="#">Carreiras</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Siga-nos</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EcoCollect - Todos os direitos reservados</p>
             </div>
-            <p>&copy; 2024 Collection Express - Todos os direitos reservados</p>
-            <p>Um serviço eco-friendly para um futuro mais limpo.</p>
         </div>
     </footer>
-</body>
-</html>
 
-
-
-
-
-</head>
-<body>
-    
+    <script src="main.js"></script>
 </body>
 </html>

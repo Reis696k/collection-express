@@ -1,6 +1,7 @@
-// script.js - Interações básicas para Collection Express
+// main.js - Scripts principais para o site
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Efeito smooth scroll para links de navegação
+    // Smooth scroll para links de navegação
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -14,48 +15,31 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
+                
+                // Atualiza a URL sem recarregar a página
+                if (history.pushState) {
+                    history.pushState(null, null, targetId);
+                } else {
+                    location.hash = targetId;
+                }
             }
         });
     });
     
-    // Efeito de carregamento com animações
-    const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.step, .service-card, .tip');
-        
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.2;
-            
-            if (elementPosition < screenPosition) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
-        });
-    };
+    // Menu mobile
+    const mobileMenuBtn = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
     
-    // Configura animações iniciais
-    window.addEventListener('load', function() {
-        const animatedElements = document.querySelectorAll('.step, .service-card, .tip');
-        animatedElements.forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
         });
         
-        animateOnScroll();
-    });
-    
-    // Ativa animações ao rolar
-    window.addEventListener('scroll', animateOnScroll);
-    
-    // Botão de download do app - simulação
-    const downloadButtons = document.querySelectorAll('.btn');
-    downloadButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            if (this.textContent.includes('Baixe') || this.textContent.includes('Agendar')) {
-                e.preventDefault();
-                alert('Em breve disponível para download!\nEnquanto isso, continue explorando nosso site.');
+        // Fechar menu ao clicar em um link
+        navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        navLinks.style.display = 'none';
+                    });
+                });
             }
         });
-    });
-});
